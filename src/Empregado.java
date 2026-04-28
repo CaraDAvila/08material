@@ -1,4 +1,4 @@
-public class Empregado {
+public abstract class Empregado {
     long matricula;
     String nome;
 
@@ -7,8 +7,15 @@ public class Empregado {
         this.nome = nome;
     }
 
-    public double calcularSalario(){
-        return 0;
+    //superclasse | classe abstrata NÃO GERA OBJETO
+    public abstract double calcularSalario();
+
+    @Override
+    public String toString() {
+        return "Empregado{" +
+                "nome='" + nome + '\'' +
+                ", matricula=" + matricula +
+                '}';
     }
 
     //public String getDados(){
